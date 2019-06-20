@@ -1,0 +1,16 @@
+button {
+    margin: 10px
+}
+
+#gifs-go-here {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    margin: 10px;
+}
+
+body {
+    max-width: 960px;
+}

@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href = "assets/css/styles.css">
 </head>
+
 <body>
-    
+    <h1>Looney Tunes Gifs!</h1>
+    <div id="buttons">
+        <button data-cartoon="bugs bunny">
+            Bugs Bunny
+        </button>
+        <button data-cartoon="wile e coyote">
+            Wile E. Coyote
+        </button>
+    </div>
+    <form id="character-form">
+        <label for="character-input">Add a Character!</label>
+        <input type="text" id="character-input">
+        <br>
+        <input id="add-character" type="submit" value="Add a Character!">
+    </form>
+
+    <div id="gifs-go-here">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/java.js"></script>
 </body>
+
 </html>
