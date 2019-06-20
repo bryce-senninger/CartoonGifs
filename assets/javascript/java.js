@@ -1,4 +1,4 @@
-let looneyTunes = ["Bugs Bunny", "Daffy Duck", "Elmer Fudd", "Wile E. Coyote"]
+let looneyTunes = ["Bugs Bunny", "Elmer Fudd", "Wile E. Coyote"]
 
 function displayCartoon() {
         var cartoon = $(this).attr("data-cartoon");
@@ -20,6 +20,7 @@ function displayCartoon() {
                     gifDiv.prepend(p);
                     gifDiv.prepend(personImage);
                     $("#gifs-go-here").prepend(gifDiv);
+                    console.log(response.data)
                 }
             });
 }
@@ -46,3 +47,12 @@ $(document).on("click", ".character-btn", displayCartoon);
 
 
 renderButtons();
+
+// let state = $(this).attr("data-state");
+// if (state === "still") {
+//   $(this).attr("src", $(this).attr("data-animate"));
+//   $(this).attr("data-state", "animate");
+// } else {
+//   $(this).attr("src", $(this).attr("data-still"));
+//   $(this).attr("data-state", "still");
+// }
