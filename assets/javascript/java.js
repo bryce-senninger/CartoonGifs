@@ -1,4 +1,4 @@
-let looneyTunes = ["Bugs Bunny", "Elmer Fudd", "Wile E. Coyote"]
+let looneyTunes = ["Bugs Bunny", "CatDog", "Popeye", "Ren and Stimpy", "Wile E. Coyote"]
 
 function displayCartoon() {
         var cartoon = $(this).attr("data-cartoon");
@@ -11,6 +11,8 @@ function displayCartoon() {
         })
             .then(function (response) {
                 var results = response.data;
+                console.log(response);
+                $("#gifs-go-here").empty();
                 for (var i = 0; i < results.length; i++) {
                     var gifDiv = $("<div>");
                     var rating = results[i].rating;
@@ -24,6 +26,8 @@ function displayCartoon() {
                 }
             });
 }
+
+
 
 function renderButtons() {
     $("#buttons").empty();
@@ -41,18 +45,10 @@ $("#add-character").on("click", function (event) {
     var character = $("#character-input").val().trim();
     looneyTunes.push(character);
     renderButtons();
+    $('#character-input').val("");
 });
 
 $(document).on("click", ".character-btn", displayCartoon);
 
 
 renderButtons();
-
-// let state = $(this).attr("data-state");
-// if (state === "still") {
-//   $(this).attr("src", $(this).attr("data-animate"));
-//   $(this).attr("data-state", "animate");
-// } else {
-//   $(this).attr("src", $(this).attr("data-still"));
-//   $(this).attr("data-state", "still");
-// }
